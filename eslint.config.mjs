@@ -5,7 +5,7 @@ import { defineFlatConfig } from "@ayingott/eslint-config"
 export default defineFlatConfig(
   [
     {
-      ignores: ["grammar.js", "**/target/**"],
+      ignores: ["grammar.js", "**/target/**", "**/src/**"],
     },
   ],
   {

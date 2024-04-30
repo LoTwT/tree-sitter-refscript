@@ -17,3 +17,8 @@ target/
 # Node artifacts
 build/
 prebuilds/
+
+# Grammar volatiles
+*.wasm
+*.obj
+*.o

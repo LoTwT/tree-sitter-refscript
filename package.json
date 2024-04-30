@@ -11,11 +11,16 @@
     "src/**"
   ],
   "scripts": {
+    "build": "pnpm run ts generate --no-bindings",
+    "build-wasm": "pnpm run ts build --wasm",
+    "generate": "pnpm run ts generate",
     "install": "node-gyp-build",
     "lint": "eslint .",
+    "parse": "pnpm run ts parse",
     "prebuildify": "prebuildify --napi --strip",
     "prepare": "simple-git-hooks",
     "prettier": "prettier --write .",
+    "test": "pnpm run ts test",
     "ts": "tree-sitter",
     "up": "taze latest -I -f"
   },
