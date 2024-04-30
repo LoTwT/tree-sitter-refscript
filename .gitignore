@@ -9,3 +9,11 @@ lib-cov
 logs
 node_modules
 temp
+
+# Rust artifacts
+Cargo.lock
+target/
+
+# Node artifacts
+build/
+prebuilds/

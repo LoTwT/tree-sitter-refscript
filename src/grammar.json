@@ -408,69 +408,28 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "function_declaration"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "generator_function_declaration"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "class_declaration"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "lexical_declaration"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "variable_declaration"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "function_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "function_signature"
+          "name": "generator_function_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "abstract_class_declaration"
+          "name": "class_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "module"
-        },
-        {
-          "type": "PREC",
-          "value": "declaration",
-          "content": {
-            "type": "SYMBOL",
-            "name": "internal_module"
-          }
+          "name": "lexical_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "type_alias_declaration"
+          "name": "variable_declaration"
         },
         {
           "type": "SYMBOL",
-          "name": "enum_declaration"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "interface_declaration"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "import_alias"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "ambient_declaration"
+          "name": "ref_declaration"
         }
       ]
     },
@@ -11019,6 +10978,53 @@
       },
       "named": true,
       "value": "type_identifier"
+    },
+    "ref_declaration": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "kind",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "ref"
+              }
+            ]
+          }
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "variable_declarator"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SEQ",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "variable_declarator"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_semicolon"
+        }
+      ]
     }
   },
   "extras": [

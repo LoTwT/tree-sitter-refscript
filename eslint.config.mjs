@@ -5,10 +5,7 @@ import { defineFlatConfig } from "@ayingott/eslint-config"
 export default defineFlatConfig(
   [
     {
-      files: ["grammar.js"],
-      rules: {
-        "eslint-comments/no-unlimited-disable": "off",
-      },
+      ignores: ["grammar.js", "**/target/**"],
     },
   ],
   {
