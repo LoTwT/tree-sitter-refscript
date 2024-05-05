@@ -1,6 +1,22 @@
 {
   "name": "tree-sitter-refscript",
+  "description": "RefScript grammar for tree-sitter",
   "packageManager": "pnpm@9.0.6",
+  "author": "LoTwT <l709937065@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/LoTwT/pkg-name#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoTwT/pkg-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LoTwT/pkg-name/issues"
+  },
+  "keywords": [
+    "refscript",
+    "tree-sitter-refscript"
+  ],
+  "main": "bindings/node",
   "types": "bindings/node",
   "files": [
     "binding.gyp",
@@ -19,7 +35,9 @@
     "parse": "pnpm run ts parse",
     "prebuildify": "prebuildify --napi --strip",
     "prepare": "simple-git-hooks",
+    "prepublishOnly": "pnpm build",
     "prettier": "prettier --write .",
+    "release": "bumpp && pnpm publish",
     "test": "pnpm run ts test",
     "ts": "tree-sitter",
     "up": "taze latest -I -f"
@@ -39,6 +57,7 @@
     "@ayingott/eslint-config": "^0.9.1",
     "@ayingott/prettier-config": "^0.3.1",
     "acorn": "^8.11.3",
+    "bumpp": "^9.4.1",
     "eslint": "^9.1.1",
     "lint-staged": "^15.2.2",
     "prebuildify": "^6.0.0",
