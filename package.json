@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-refscript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "RefScript grammar for tree-sitter",
   "packageManager": "pnpm@9.0.6",
   "author": "LoTwT <l709937065@gmail.com>",
